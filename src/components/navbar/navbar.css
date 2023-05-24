@@ -1,0 +1,20 @@
+.NavBar{
+    display: flex;
+    background-color: black;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.list{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+}
+
+.list li{
+    flex-direction: row;
+    margin: 5px;
+}
