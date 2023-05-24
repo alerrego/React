@@ -7,7 +7,7 @@ import "./App.css"
     <>
       <div className="App">
         <Home/>
-        <ItemListContainer texto ="Tu página de confianza"/>
+        <ItemListContainer texto ="Tu tienda de confianza"/>
       </div>
     </>
   );
