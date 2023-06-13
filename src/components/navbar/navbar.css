@@ -17,4 +17,10 @@
 .list li{
     flex-direction: row;
     margin: 5px;
+    padding: 5px;
+}
+
+.NavBar a{
+    text-decoration: none;
+    color: white;
 }
