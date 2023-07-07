@@ -1,0 +1,9 @@
+.item-count{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.item-count button{
+    margin: 5px;
+}

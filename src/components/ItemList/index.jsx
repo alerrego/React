@@ -11,6 +11,7 @@ const ItemList = ({items}) =>{
         <Item key={item.id} name={item.name} description={item.description} id={item.id} categoryId={item.categoryId} img={item.img}
         onItemClicked={item.onItemClicked}
         textButton={item.textButton}
+        textButton2={item.textButton2}
         />
         </Col>
     )}

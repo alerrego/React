@@ -1,13 +1,14 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { getItems } from "../../services/index";
 import { Container} from 'react-bootstrap';
-import { ItemList, NavBar } from '../../components/index'
+import { ItemList} from '../../components/index'
+import { getItems } from '../../firebase/services/index'
 import './index.css'
 
 const ItemListContainer = () => {
     const { id } = useParams()
     const navigate = useNavigate();
+
 
 
     const [items, setItems] = useState([]);
@@ -16,7 +17,7 @@ const ItemListContainer = () => {
         getItems()
         if (id) {
             getItems().then((item)=>{
-                setItems((item.filter(pro => pro.categoryId === id)));
+                setItems((item.filter(pro => pro.category === id)));
             })
         }else {
             getItems().then((item) => setItems(item))
@@ -31,6 +32,7 @@ const ItemListContainer = () => {
                 ...item,
                 onItemClicked: () => navigate(`/itemDetail/${item.id}`),
                 textButton: "Ver detalle",
+                textButton2: 'Comprar'
             }))}/>
         </Container>
         </>

@@ -1,7 +1,7 @@
 import { Card,Button } from "react-bootstrap"
 import './index.css'
 
-const Item = ({name,description,img,id,onItemClicked,textButton}) =>{
+const Item = ({name,description,img,id,onItemClicked,addItem,textButton,textButton2}) =>{
     return(
         <div className="card">
             <Card>
@@ -13,6 +13,9 @@ const Item = ({name,description,img,id,onItemClicked,textButton}) =>{
                 </Card.Text>
                 <Button variant="primary" onClick={onItemClicked}>
                     {textButton}
+                </Button>
+                <Button variant="primary" onClick={onItemClicked}>
+                    {textButton2}
                 </Button>
             </Card.Body>
             </Card>

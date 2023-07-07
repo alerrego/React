@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom"
 import { ItemDetail } from "../../components"
 import { useEffect, useState } from "react"
-import { getItem } from "../../services"
+import { getItem } from "../../firebase/services"
 
 const ItemDetailContainer = () =>{
     const {id} = useParams()
@@ -19,7 +19,7 @@ const ItemDetailContainer = () =>{
 
     return(
         <div className="card">
-            <ItemDetail name={item.name} id={item.id} description={item.description} categoryId={item.categoryId} img={item.img} />
+            <ItemDetail key={item.id} name={item.name} id={item.id} description={item.description} categoryId={item.categoryId} img={item.img} />
         </div>
     )
 }
