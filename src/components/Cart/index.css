@@ -1,0 +1,44 @@
+.empty{
+    text-align: center;
+    font-size: 50px;
+}
+
+.btn-finalizar{
+    justify-content: center;
+    background-color: green;
+}
+
+.finalizar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 10px ;
+    height: 500px;
+}
+
+.botones{
+    margin: 10px;
+}
+
+.botones button{
+    margin: 5px;
+    font: size 30px;
+}
+
+.clear{
+    background-color: rgb(253, 30, 30);
+}
+
+.container button{
+    background-color: rgb(253, 30, 30);
+}
+
+.total{
+    text-align: center;
+    font-size: 30px;
+    background-color: black;
+    color: white;
+    width: 100%;
+}

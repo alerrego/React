@@ -6,23 +6,23 @@ import { getItems } from '../../firebase/services/index'
 import './index.css'
 
 const ItemListContainer = () => {
-    const { id } = useParams()
+    const category = useParams().category
     const navigate = useNavigate();
-
-
 
     const [items, setItems] = useState([]);
 
+    console.log(category)
+
     useEffect(() => {
         getItems()
-        if (id) {
+        if (category) {
             getItems().then((item)=>{
-                setItems((item.filter(pro => pro.category === id)));
+                setItems((item.filter(pro => pro.category === category)));
             })
         }else {
             getItems().then((item) => setItems(item))
         }
-    }, [id])
+    }, [category])
 
 
     return (

@@ -1,19 +1,39 @@
-import { Card,Button } from "react-bootstrap"
+import { Card} from "react-bootstrap"
 import { ItemCount } from "../ItemCount"
+import { useContext, useState } from "react"
+import { CartContext } from "../../context/cartContext"
+import './index.css'
 
-const ItemDetail = ({ id, name, description, categoryId, img }) => {
+const ItemDetail = ({item}) => {
+
+    const {addItem} = useContext(CartContext)
+
+    const [quantity, setQuantity] = useState(1);
+    const handlerAdd = () =>{
+        quantity < item.stock && setQuantity(quantity + 1)
+    }
+    const handlerRest = () =>{
+        quantity > 1 &&  setQuantity(quantity - 1)
+    }
+    const add = () =>{
+        addItem(item,quantity)
+    }
     return (
-        <div className="card">
+        <div className="card-detail">
             <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={img} />
+                <div>
+                <Card.Img variant="top" src={item.img} />
+                </div>
+                <div>
                 <Card.Body>
-                    <Card.Title>{name}</Card.Title>
+                    <Card.Title>{item.name}</Card.Title>
                     <Card.Text>
-                        {description}
+                        <h3>{item.description}</h3>
+                        <h3>Precio: {item.price}$</h3>
                     </Card.Text>
-                    <ItemCount/>
-                    <Button variant="primary">Comprar</Button>
+                    <ItemCount quantity={quantity} handlerAdd={handlerAdd} handlerRest={handlerRest} add={add}/>
                 </Card.Body>
+                </div>
             </Card>
         </div>
     )

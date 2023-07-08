@@ -13,13 +13,13 @@ const NavBar = () => {
                         <NavLink to={'/'}>Home</NavLink>
                     </li>
                     <li>
-                        <NavLink to={'/t-shirts'}>T-Shirts</NavLink>
+                        <NavLink to={'/T-Shirts'}>T-Shirts</NavLink>
                     </li>
                     <li>
-                        <NavLink to={'/accesories'}>Accesories</NavLink>
+                        <NavLink to={'/Accesories'}>Accesories</NavLink>
                     </li>
                     <li>
-                        <NavLink to={'/shoes'}>Shoes</NavLink>
+                        <NavLink to={'/Shoes'}>Shoes</NavLink>
                     </li>
                 </ul>
                 <NavLink to={'/cart'}><CartWidget/></NavLink>

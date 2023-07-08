@@ -1,9 +1,25 @@
 .item-count{
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 5px;
 }
 
 .item-count button{
     margin: 5px;
+    border: 2px solid black;
+    font-size: 30px;
+    background-color: black;
+    color: white;
+}
+
+.item-count p{
+    font-size: 18px;
+}
+
+.add-cart-btn{
+    font-size: 18px;
+    justify-content: center;
+    background-color: black;
+    color: white;
 }

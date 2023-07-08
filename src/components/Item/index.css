@@ -1,6 +1,28 @@
 .card{
     display: flex;
     flex-wrap: wrap;
-    height: 250px;
+    height: 400px;
     width: 250px;
+}
+
+.card h2{
+    font-size: 25px;
+}
+
+.title{
+    font-size: 35px;
+}
+
+.price{
+    font-size: 30px;
+}
+
+.buttons{
+    padding: 10px;
+    display: flex;
+}
+
+.button{
+    margin: 2px;
+    padding: 5px;
 }

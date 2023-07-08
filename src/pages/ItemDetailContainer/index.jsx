@@ -1,12 +1,14 @@
 import { useParams } from "react-router-dom"
 import { ItemDetail } from "../../components"
-import { useEffect, useState } from "react"
+import {  useEffect, useState } from "react"
 import { getItem } from "../../firebase/services"
+import './index.css'
 
 const ItemDetailContainer = () =>{
     const {id} = useParams()
 
     const [item,setItem] = useState();
+
 
     useEffect(() =>{
         getItem(id).then((data) =>
@@ -18,8 +20,8 @@ const ItemDetailContainer = () =>{
     if(!item) return <div>Cargando...</div>
 
     return(
-        <div className="card">
-            <ItemDetail key={item.id} name={item.name} id={item.id} description={item.description} categoryId={item.categoryId} img={item.img} />
+        <div className="container">
+            <ItemDetail key={item.id} item={item}/>
         </div>
     )
 }
